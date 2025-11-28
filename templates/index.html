@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personality Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2> Personality Detection Model</h2>
+        <form id="personality-form">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" required>
+
+            <label for="openness">Openness (1-10): <span id="openness-value">3</span></label>
+            <input type="range" id="openness" name="openness" min="1" max="10" value="3" oninput="document.getElementById('openness-value').innerText = this.value" required>
+
+            <label for="neuroticism">Neuroticism (1-10): <span id="neuroticism-value">3</span></label>
+            <input type="range" id="neuroticism" name="neuroticism" min="1" max="10" value="3" oninput="document.getElementById('neuroticism-value').innerText = this.value" required>
+
+            <label for="conscientiousness">Conscientiousness (1-10): <span id="conscientiousness-value">3</span></label>
+            <input type="range" id="conscientiousness" name="conscientiousness" min="1" max="10" value="3" oninput="document.getElementById('conscientiousness-value').innerText = this.value" required>
+
+            <label for="agreeableness">Agreeableness (1-10): <span id="agreeableness-value">3</span></label>
+            <input type="range" id="agreeableness" name="agreeableness" min="1" max="10" value="3" oninput="document.getElementById('agreeableness-value').innerText = this.value" required>
+
+            <label for="extraversion">Extraversion (1-10): <span id="extraversion-value">3</span></label>
+            <input type="range" id="extraversion" name="extraversion" min="1" max="10" value="3" oninput="document.getElementById('extraversion-value').innerText = this.value" required>
+
+
+            <button type="submit">Get Personality</button>
+        </form>
+
+        <div id="result">
+            <h3>Result:</h3>
+            <!-- <p id="person-no-output">Waiting for data...</p> -->
+            <p id="personality-output"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

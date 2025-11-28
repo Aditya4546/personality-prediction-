@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+#personality-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#personality-form input[type="number"],
+#personality-form select,
+#personality-form input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+/* Style for the range input (sliders) */
+#personality-form input[type="range"] {
+    height: 30px;
+}
+
+#openness-value,
+#neuroticism-value,
+#conscientiousness-value,
+#agreeableness-value,
+#extraversion-value {
+    color: #007bff;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#result h3 {
+    margin-top: 0;
+    color: #28a745;
+}
+
+#person-no-output,
+#personality-output {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
